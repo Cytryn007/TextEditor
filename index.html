@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <script>
+        function changeHeading(e){document.execCommand('formatBlock',false,e.target.value);}
+    </script>
+    <div class="app">
+        <div class="buttons-bar">
+                <button class="copy" onclick="document.execCommand('copy',false,'');">
+                        <i class="fas fa-copy"></i>
+                </button>
+                <button class="paste" onclick="document.execCommand('paste',false,'');">
+                    <i class="fas fa-paste"></i>
+                </button>
+                <button class="select" onclick="document.execCommand('selectAll',false,'');">
+                    select
+                </button>
+                <button class="cut" onclick="document.execCommand('cut',false,'');">
+                    <i class="fas fa-cut"></i>
+                </button>
+                <button class="undo" onclick="document.execCommand('undo',false,'');">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button class="redo" onclick="document.execCommand('redo',false,'');">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="save" id="saveButton">
+                        <i class="fas fa-save"></i>
+                </button>
+        </div>
+        <div class="buttons-bar">
+            <button class="bold" onclick="document.execCommand('bold',true,'');">
+                <i class="fas fa-bold"></i>
+            </button>
+            <button class="underline" onclick="document.execCommand('underline',false,'');">
+                <i class="fas fa-underline"></i>
+            </button>
+            <button class="italic" onclick="document.execCommand('italic', false,'');">
+                <i class="fas fa-italic"></i>
+            </button>
+            <button class="removeFormat" onclick="document.execCommand('removeFormat',false,'');">
+                <i class="fas fa-remove-format"></i>
+            </button>
+            
+            <select onchange="document.execCommand('formatBlock',false,this.value);">
+                <option value="h1">
+                    h1
+                </option>
+                <option value="h2">
+                    h2
+                </option>
+                <option value="h2">
+                    h2
+                </option>
+                <option value="h3">
+                    h4
+                </option>
+                <option value="h4">
+                    h4
+                </option>
+                <option value="h5">
+                    h5
+                </option>
+                <option value="h6">
+                    h6
+                </option>
+                <option value="address">
+                    address
+                </option>
+                <option value="pre">
+                    pre
+                </option>
+            </select>
+        </div>
+        <div class="editor" contenteditable>
+            pole tekstowe
+        </div>
+
+    </div>
+    <script src="https://kit.fontawesome.com/858055d13c.js" crossorigin="anonymous"></script>
+</body>
+</html>

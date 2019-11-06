@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+button {
+    padding: 15px;
+    display: block;
+    background-color: #aaaaaa;
+    color: white;
+    border: 1px solid white;
+    font-family: serif;
+    font-size: 1.2em;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: black;
+}
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-size: 1.1em;
+
+}
+.buttons-bar {
+    height: 50px;
+    flex: 1 1 auto;
+    display: flex;
+}
+.editor {
+    background-color: #bbbfee;
+    height: 100%;
+    padding: 15px;
+}
+.editor:focus {
+    outline: none;
+}
+.bold {
+    font-weight: 700;
+}
+.italic {
+    font-style: italic;
+}
+.underline {
+    text-decoration: underline;
+}

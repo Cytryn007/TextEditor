@@ -1,0 +1,21 @@
+{
+  "name": "keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "electron": "^6.0.10"
+  },
+  "devDependencies": {
+    "asar": "^2.0.1",
+    "live-server": "^1.2.1"
+  },
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "asar pack . app.asar"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
